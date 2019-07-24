@@ -3,9 +3,13 @@ Rails.application.routes.draw do
 
   get 'static_pages/help'
 
+  get 'static_pages/about'
+  
+  root 'static_pages#home'
+
   resources :microposts
   resources :users
-  root 'users#index'
+  # root 'users#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   # root 'application#hello'
 end
