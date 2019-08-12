@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-  attr_accessor :name, :email
-  before_save { self.email = email.downcase! }
+  before_save { self.email = email.downcase }
 
   has_many :microposts
   validates :name,
